@@ -40,7 +40,7 @@
 
     <div class="grid">
       <div>
-        <div class="hero"><img src="Imagem do WhatsApp 2026-05-02 as 13.30.55.jpeg" alt="Hero Dunya"></div>
+        <div class="hero"><img src="WhatsApp image 2026-05-02 as 13.30.55.jpeg" alt="Hero Dunya - Linha Gold"></div>
       </div>
 
       <aside>
@@ -78,5 +78,20 @@
     </div>
 
   </div>
-</div>*
-
+</div>
+<script>
+  const pixKey = '+55 51 98311-2559';
+  function showPix(){ document.getElementById('pixBox').style.display='block'; document.getElementById('pixBox').scrollIntoView({behavior:'smooth'}); }
+  function copyPix(){ navigator.clipboard.writeText(pixKey).then(()=>alert('Chave PIX copiada: '+pixKey)).catch(()=>alert('Copie manualmente: '+pixKey)); }
+  function sendWhats(){
+    const nome=document.getElementById('nome').value||'';
+    const whats=document.getElementById('whats').value||'';
+    const qtd=document.getElementById('qtd').value||'1';
+    const cpf=document.getElementById('cpf').value||'';
+    const msg = `Ola Dunya! Acabei de pagar o Open Lote 1 (R$70). Nome: ${nome} WhatsApp: ${whats} Qtd: ${qtd} CPF: ${cpf}`;
+    const phone = '5511986976564';
+    window.open(`https://wa.me/${phone}?text=`+encodeURIComponent(msg),'_blank');
+  }
+</script>
+</body>
+</html>
